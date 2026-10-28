@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="theme-color" content="#1a0b3b" />
+    <meta name="description" content="Playbox Match — a colorful memory game for everyone." />
+    <title>Playbox Match</title>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div id="app" class="phone">
+      <div class="status-glow"></div>
+
+      <header class="topbar">
+        <div class="coin-pill" aria-label="Coins">
+          <span class="coin-icon">●</span>
+          <span id="coinCount">0</span>
+        </div>
+        <div class="topbar-actions">
+        <button id="motionBtn" class="icon-btn" type="button" aria-label="Reduce motion off">
+          <span id="motionIcon">✨</span>
+          <span class="icon-btn-label">MOTION</span>
+        </button>
+        <button id="soundBtn" class="icon-btn" type="button" aria-label="Sound on">
+          <span id="soundIcon">🔊</span>
+          <span class="icon-btn-label" id="soundLabel">SOUND</span>
+        </button>
+        </div>
+      </header>
+
+      <main id="screens"></main>
+    </div>
+
+    <div id="toast" class="toast" hidden></div>
+    <script src="js/audio.js"></script>
+    <script src="js/game.js"></script>
+  </body>
+</html>
